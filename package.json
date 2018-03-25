@@ -1,0 +1,22 @@
+{
+  "name": "szplotka",
+  "version": "0.0.1",
+  "description": "Szplotka.pl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "szplotka"
+  ],
+  "author": "Szymon \"Button\" Guzik",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemap": "^1.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}
