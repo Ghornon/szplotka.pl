@@ -1,0 +1,40 @@
+/*======================================*/
+
+
+/*				 Variables           	*/
+
+
+/*======================================*/
+
+//fonts
+
+$fontSpecial: 'Kalam', cursive;
+$fontBold: 'Lato', sans-serif;
+$fontDefault: 'Hind', sans-serif;
+
+/*======================================*/
+
+
+/*				   Mixin               	*/
+
+
+/*======================================*/
+
+@mixin ripple($color) {
+    .ripple {
+        border-radius: 50%;
+        background: $color;
+        position: absolute;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-animation: ripple 0.6s linear;
+        animation: ripple 0.6s linear;
+    }
+}
+
+@mixin stroke($radius, $color) {
+    text-shadow: (-$radius) 0 $radius $color,
+        0 $radius $radius $color,
+        $radius 0 $radius $color,
+        0 (-$radius) $radius $color;
+}

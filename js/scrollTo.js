@@ -49,7 +49,9 @@ var ScrollTo = (function() {
         var element = document.getElementById(attr);
         var height = element.clientHeight;
         
-        var to =  height < windowHeight ? element.offsetTop - windowHeight / 5 : element.offsetTop;
+        var elementTop = element.getBoundingClientRect().top + window.scrollY;
+        
+        var to =  height < windowHeight ? elementTop - windowHeight / 5 : elementTop;
         
         $button[key].addEventListener('click', function(event) {
             scrollTo(document.documentElement, to, 1250);
