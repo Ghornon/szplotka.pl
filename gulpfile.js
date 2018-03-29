@@ -13,14 +13,14 @@ gulp.task('sass', function() {
     .pipe(sass.sync().on('error', sass.logError)) // Compile Sass into style.css.
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
-        cascade: false
+        cascade: true
     }))
     .pipe(cssnano())                // Minify and optimize style.css
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./css'));     // Write style.css to the project's root directory.
 });
 
-/* Watch the Sass directory for changes. */
+/* Watch the directory for changes. */
 
 gulp.task('watch', function() {
   gulp.watch('./css/*.scss', ['sass']);  // If a file changes, re-run 'sass'

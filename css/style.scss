@@ -1013,14 +1013,14 @@ body > section, body > main {
 /*======================================*/
 
 
-/*				  Contatc            	*/
+/*				  Contact            	*/
 
 
 /*======================================*/
 
 #contact {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background: url('../images/contact.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -1030,6 +1030,10 @@ body > section, body > main {
     justify-content: center;
     align-items: center;
     color: #fff;
+    
+    .container {
+        padding: 50px 0;
+    }
     
     &::before {
         width: 100%;
@@ -1089,12 +1093,13 @@ body > section, body > main {
     }
     
     .map {
-        padding: 10px;
+        padding: 10px 0;
         height: 100%;
         
         iframe {
             box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
             width: 100%;
+            min-height: 360px;
             height: 100%;
             border: 0; 
         }

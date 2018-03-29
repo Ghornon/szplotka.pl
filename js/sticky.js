@@ -1,27 +1,25 @@
-var throttle = (callback, limit) => {
-    
-    var wait = false;
-    return function () {
-        if (!wait) {
-            callback();
-            wait = true;
-            setTimeout(function () {
-                wait = false;
-            }, limit);
-        }
+var Sticky = (function() {
+ 
+    var stickyNavTop = document.getElementById('banner').offsetTop - 1;
+    var topBar = document.getElementById('topbar');
+
+    var stickyNav = function () {
+        
+        var scrollTop = window.scrollY;
+
+        if (scrollTop > stickyNavTop)
+            topBar.classList.add('sticky');
+        else 
+            topBar.classList.remove('sticky');
+        
     };
+    
+    window.addEventListener('scroll', function() {
+       
+        throttle(stickyNav(), 80);
+        
+    });
+    
+    stickyNav();
 
-};
-
-var stickyNavTop = $('#banner').offset().top - 1;
-
-var stickyNav = function () {
-    var scrollTop = $(window).scrollTop();
-
-    if (scrollTop > stickyNavTop) $('#topbar').addClass('sticky');
-    else $('#topbar').removeClass('sticky');
-}
-
-$(window).scroll(function () {
-    throttle(stickyNav(), 80);
-});
+})();

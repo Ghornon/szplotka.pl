@@ -1,6 +1,6 @@
 var Button = (function(){
     
-    var $button = $('.button');
+    var $button = document.getElementsByClassName('button');
     
     var createRipple = function (e) {
     
@@ -8,6 +8,8 @@ var Button = (function(){
             circle = document.createElement('div'),
             d = Math.max(this.clientWidth, this.clientHeight),
             rect = elemet.getBoundingClientRect();
+        
+        elemet.getBoundingClientRect
 
         circle.style.width = circle.style.height = d + 'px';
         circle.style.left = e.clientX - rect.left - d / 2 + 'px';
@@ -25,9 +27,11 @@ var Button = (function(){
     };
     
     var eventListener = (function () {
-      
-        $button.mouseenter(createRipple);
-        $button.click(createRipple);
+        
+        Object.keys($button).forEach(function(key) {
+            $button[key].addEventListener('mouseenter', createRipple);
+            $button[key].addEventListener('click', createRipple);
+        });
         
     })();
     
