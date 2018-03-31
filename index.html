@@ -28,7 +28,7 @@
 
 </head>
 
-<body class="nojs">
+<body class="">
 
     <!------------------------------------------------------------------
     ╔═══╦╗───────────────╔╗───────╔╗───────────────────────────────╔╗───
@@ -50,11 +50,23 @@
     
     ------------------------------------------------------------------->
     
+    <!-- Section Preloader -->
+
+    <div id="preloader">
+        
+        <div class="loader"></div>
+        
+    </div>
+    
+    <!-- Menu button -->
+    
     <input type="checkbox" name="btn-menu" id="btn-menu">
     
-    <!-- Section Preloader -->
+    <!-- Section Intro -->
     
     <section id="intro">
+        
+        <!-- Intro topbar -->
         
         <header class="topbar container">
             
@@ -62,7 +74,7 @@
                 
                 <div class="logo col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
                 
-                    <img src="" alt="logo">
+                    <img src="images/logo.png" alt="logo">
 
                 </div>
 
@@ -76,12 +88,16 @@
             
         </header>
         
+        <!-- Main content -->
+        
         <div class="intro">
             
-            <h1>Szplotka.pl</h1>
+            <h1 class="display-1">Szplotka.pl</h1>
             <h2>Gabinet wspierania rozwoju dzieci, młodzieży oraz osób dorosłych</h2>
             
         </div>
+        
+        <!-- Address -->
         
         <address class="map">
             
@@ -95,6 +111,8 @@
     
     <nav id="nav">
         
+        <!-- Nav buttons -->
+        
         <header class="header">
             
             <ul>
@@ -103,6 +121,8 @@
             </ul>
             
         </header>
+        
+        <!-- Menu -->
         
         <ul class="menu">
             <li class="active"><a href="#intro" class="scrollTo">Strona główna</a></li>
@@ -127,19 +147,25 @@
         <div class="container-fluid">
             
             <div class="row">
-            
+                
+                <!-- Logo image -->
+                
                 <div class="logo col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
 
-                    <img src="" alt="logo">
+                    <img src="images/logo.png" alt="logo">
 
                 </div>
-
+                
+                <!-- Logo text -->
+                
                 <header class="header col-xl-4 col-lg-4 col-md-4 d-none d-sm-none d-md-block text-center">
 
                     <h2>Szplotka.pl</h2>
 
                 </header>
-
+                
+                <!-- Nav button -->
+                
                 <div class="menu col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 text-right">
 
                     <label for="btn-menu"><h5>Menu</h5> <span class="hamburger"></span></label>
@@ -160,6 +186,8 @@
             
             <div class="row">
                 
+                <!-- Offer list -->
+                
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                 
                     <ul class="offer">
@@ -172,7 +200,9 @@
                     </ul>
 
                 </div>
-
+                
+                <!-- Banner -->
+                
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 wrapper">
 
                     <div class="row">
@@ -226,11 +256,72 @@
 
                 </div>
                 
+                <!-- End -->
+                
             </div>
             
         </div>
         
     </section>
+    
+<!--
+    <div id="timetable">
+
+        <div class="container">
+
+            <table class="table table-hover text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Dzień</th>
+                        <th scope="col">Psycholog</th>
+                        <th scope="col">Pedagog</th>
+                        <th scope="col">Logopeda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Pon</th>
+                        <td>9:30 - 11:30</td>
+                        <td></td>
+                        <td>15:30 - 19:30</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Wt</th>
+                        <td>9:30 - 13:30</td>
+                        <td>16:00 - 19:30</td>
+                        <td class="pop">15:30 - 19:30* <span class="label">(po wcześniejszym uzgodnieniu)</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Śr</th>
+                        <td>9:30 - 12:30</td>
+                        <td></td>
+                        <td>15:30 - 19:30</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Czw</th>
+                        <td>16:30 - 19:30</td>
+                        <td></td>
+                        <td>15:30 - 19:30</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pt</th>
+                        <td>16:30 - 19:30</td>
+                        <td>8:00 - 11:00</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sobota</th>
+                        <td>telefonicznie</td>
+                        <td>telefonicznie</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+-->
     
     <!-- Main -->
     
@@ -243,6 +334,8 @@
             <div class="container">
                 
                 <div class="row">
+                   
+                   <!-- 1st -->
                     
                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                         
@@ -264,21 +357,23 @@
                             </div>
                             
                             <ul class="nav">
-                                <li><a href="#"><i class="fa fa-commenting nth-1"></i></a></li>
+                                <li><a href="#contact" class="scrollTo messageTo" data-msg="Agnieszka Burek-Blacha"><i class="fa fa-commenting nth-1"></i></a></li>
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             </ul>
                             
                             <div class="button">
                                 
-                                <a href="#">Biografia</a>
+                                <a href="Agnieszka-Burek-Blacha.html#profile">Biografia</a>
                                 
                             </div>
                             
                         </div>
                         
-                        <div class="bar"></div>
+                        <div class="bars"></div>
                         
                     </div>
+                    
+                    <!-- 2nd -->
                     
                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                         
@@ -312,9 +407,11 @@
                             
                         </div>
                         
-                        <div class="bar"></div>
+                        <div class="bars"></div>
                         
                     </div>
+                    
+                    <!-- 3rd -->
                     
                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                         
@@ -348,35 +445,45 @@
                             
                         </div>
                         
-                        <div class="bar"></div>
+                        <div class="bars"></div>
                         
                     </div>
+                    
+                    <!-- End -->
                     
                 </div>
                 
             </div>
             
-        </section>
+        </section> 
         
         <!-- Section offer -->
         
         <section id="offer">
             
+            <!-- Header -->
+            
             <div class="container">
                 
                 <header class="header">
                 
-                    <h1>Nasza oferta</h1>
+                    <h1 class="display-1">Nasza oferta</h1>
 
                 </header>
                 
             </div>
             
+            <!-- Offer list -->
+            
             <div class="container-fluid">
                 
                 <div class="row">
+                   
+                    <!-- 1st column -->
                     
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                        
+                        <!-- #psycholog -->
                         
                         <div class="offer" id="psycholog">
                             
@@ -402,6 +509,8 @@
                             
                         </div>
                         
+                        <!-- #profilaktyka-zdrowego-odzywiania -->
+                        
                         <div class="offer" id="profilaktyka-zdrowego-odzywiania">
                             
                             <header class="header">
@@ -424,7 +533,11 @@
                         
                     </div>
                     
+                    <!-- 2nd column -->
+                    
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                        
+                        <!-- #pedagog -->
                         
                         <div class="offer" id="pedagog">
                             
@@ -448,6 +561,8 @@
                             
                         </div>
                         
+                        <!-- #oferta-zespolu -->
+                        
                         <div class="offer" id="oferta-zespolu">
                             
                             <header class="header">
@@ -470,7 +585,11 @@
                         
                     </div>
                     
+                    <!-- 3rd column -->
+                    
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                        
+                        <!-- #ogopeda-neurologopeda -->
                         
                         <div class="offer" id="logopeda-neurologopeda">
                             
@@ -503,7 +622,11 @@
                         
                     </div>
                     
+                    <!-- 4th column -->
+                    
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                        
+                        <!-- #wczesne-wspomaganie-rozwoju-->
                         
                         <div class="offer">
                             
@@ -535,6 +658,40 @@
                         
                     </div>
                     
+                    <!-- End -->
+                    
+                </div>
+                
+            </div>
+            
+        </section>
+        
+        <!-- Section schedule -->
+        
+        <section id="schedule">
+            
+            <div class="container">
+               
+                <div class="row">
+                   
+                    <!-- Price schedule -->
+                   
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        
+                        
+                        
+                    </div>
+                    
+                    <!-- Ttariff -->
+                    
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        
+                        
+                        
+                    </div>
+                    
+                    <!-- End -->
+                    
                 </div>
                 
             </div>
@@ -543,11 +700,15 @@
         
     </main>
     
+    <!-- Section contact -->
+    
     <section id="contact">
         
         <div class="container">
             
             <div class="row">
+               
+                <!-- Form -->
                
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     
@@ -556,33 +717,42 @@
                         <input type="text" name="name" id="name" placeholder="Imię i nazwisko">
                         <input type="email" name="email" id="email" placeholder="E-mail">
                         <textarea name="message" id="message" cols="30" rows="10" placeholder="Wiadomość"></textarea>
-                        <submit id="send" class="button">Wyślij</submit>
+                        <button id="send" class="button">Wyślij</button>
                         
                     </form>
                     
                 </div>
                 
+                <!-- Address map -->
+                
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     
-                    <div class="map">
+                    <address class="map">
                         
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.430769626756!2d19.96647921589217!3d49.608483055551886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47160a812dafbe35%3A0x22cbbb8071e35c9f!2sPoniatowskiego+6%2C+34-700+Rabka-Zdr%C3%B3j!5e0!3m2!1spl!2spl!4v1522152650398"></iframe>
                         
-                    </div>
+                    </address>
                     
                 </div>
+                
+                <!-- End -->
                 
             </div>
             
         </div>
         
-        <foooter id="footer">
-            
-            Szplotka.pl by <a href="http://buttonstudio.net/">ButtonStudio.net</a> 2018 &copy; All rights reserved!
-
-        </foooter>
         
     </section>
+    
+    <!-- Footer -->
+
+    <foooter id="footer">
+
+        <p>Szplotka.pl by <a href="http://buttonstudio.net/">ButtonStudio.net</a> 2018 &copy; All rights reserved!</p>
+
+    </foooter>
+    
+    <!-- Scripts -->
     
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <script src="js/main.js"></script>

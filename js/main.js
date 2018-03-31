@@ -12,3 +12,8 @@ var throttle = (callback, limit) => {
     };
 
 };
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.body.classList.remove('nojs');
+    document.body.classList.add('loaded');
+});
