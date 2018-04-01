@@ -1074,7 +1074,7 @@ body > section, body > main {
                 top: 50%;
                 left: -15px;
                 transform: translateY(-50%);
-                background: #000;
+                background: $grapefruit;
                 border-radius: 50%;
             }
             
@@ -1091,9 +1091,60 @@ body > section, body > main {
             border-bottom-right-radius: 3px;
             box-shadow: $boxShadowLight;
             
-            .table thead tr th:last-child,
-            .table tbody td {
-                text-align: right;
+            .table {
+                padding: 0;
+                margin: 0;
+                
+                thead tr th:last-child,
+                tbody td {
+                    text-align: right;
+                }
+
+                thead tr th {
+                    border: 0;
+                }
+                
+                .pop {
+                    position: relative;
+                    cursor: help;
+                    
+                    .popover {
+                        visibility: hidden;
+                        opacity: 0;
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 100%;
+                        transform: translateY(-50%);
+                        transition-duration: 250ms;
+                        padding: 20px;
+                        border: 1px solid #ddd;
+                        border-radius: 3px;
+                        
+                        &::before {
+                            content: '';
+                            width: 15px;
+                            height: 15px;
+                            transform: rotateZ(-45deg) translateY(-50%);
+                            border-top: 1px solid #ddd;
+                            border-left: 1px solid #ddd;
+                            position: absolute;
+                            top: 50%;
+                            left: -2px;
+                            background: #fff;
+                            transition-duration: 250ms;
+                        }
+                        
+                    }
+                    
+                    &:hover .popover {
+                        visibility: visible;
+                        opacity: 1;
+                        
+                    }
+                    
+                }
+                
             }
             
         }
@@ -1108,6 +1159,22 @@ body > section, body > main {
         
         &:nth-child(3) .header::before {
             background: $mint;
+        }
+          
+    }
+    
+    .right {
+        
+        &:nth-child(1) .header::before {
+            background: $aquaDimmed;
+        }
+        
+        &:nth-child(2) .header::before {
+            background: $sunflowerDimmed;
+        }
+        
+        &:nth-child(3) .header::before {
+            background: $mintDimmed;
         }
         
     }
