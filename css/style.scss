@@ -1091,9 +1091,51 @@ body > section, body > main {
             border-bottom-right-radius: 3px;
             box-shadow: $boxShadowLight;
             
-            .table thead tr th:last-child,
-            .table tbody td {
-                text-align: right;
+            .table {
+                thead tr th:last-child,
+                tbody td {
+                    text-align: right;
+                }
+                
+                .pop {
+                    position: relative;
+                    cursor: help;
+                    
+                    .popover {
+                        position: absolute;
+                        left: 100%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 3px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition-duration: 250ms;
+                        display: block;
+                        padding: 10px;
+                        
+                        &::before {
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            content: '';
+                            width: 15px;
+                            height: 15px;
+                            border-left: 1px solid #ddd;
+                            border-bottom: 1px solid #ddd;
+                            background: #fff;
+                            transform: translateY(-50%) translateX(-50%) rotateZ(45deg);
+                        }
+                        
+                    }
+                    
+                    &:hover .popover {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                    
+                }
             }
             
         }
