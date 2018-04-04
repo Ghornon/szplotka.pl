@@ -279,7 +279,7 @@ body > section, body > main {
 
 #nav {
     width: 400px;
-    height: 100vh;
+    max-height: 100vh;
     border-left: 1px solid #ddd;
     background: #fff;
     position: fixed;
@@ -292,6 +292,7 @@ body > section, body > main {
     padding: 0;
     transition-duration: 500ms;
     z-index: 600;
+    overflow-y: auto;
     
     header {
         padding: 0 50px;
@@ -919,7 +920,12 @@ body > section, body > main {
 /*======================================*/
 
 #schedule {
-    padding: 80px 50px;
+    padding: 50px 10px 80px 10px;
+    margin-top: 80px;
+    background: rgba(236, 236, 236, .3);
+    box-shadow: inset $boxShadow;
+    width: calc(100% + 8px);
+    transform: translateX(-4px);
     
     .schedule {
         position: relative;
@@ -1060,6 +1066,14 @@ body > section, body > main {
     
 }
 
+@media screen and (max-width: 992px) {
+        
+     #schedule {
+         padding: 50px 0 80px 0;
+     }
+
+}
+
 /*======================================*/
 
 
@@ -1072,42 +1086,50 @@ body > section, body > main {
     width: 100%;
     
     .container > .header {
-//        padding: 100px 0 80px 0;
-        padding-bottom: 120px;
+        width: 100%;
+        margin: 50px auto 120px auto;
+        padding: 20px 40px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: $boxShadowLight;
+        z-index: 50;
+        position: relative;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        text-align: center;
+        background: #fff;
+//        transform: translateY(-20%);
         
         h1 {
-            display: block;
-            margin: 0 auto;
-            padding: 50px 0;
-            text-align: center;
-            color: #fff;
             @include stroke(1px, rgba(0,0,0,.35));
             font-family: $fontBold;
             font-weight: 900;
             text-transform: uppercase;
-            position: relative;
-            
-            &::before, 
-            &::after {
-                content: "";
-                position: absolute;
-                width: 40%;
-                height: 8px;
-                background: #fff;
-                box-shadow: $boxShadowLight;
-            }
-            
+            margin: 0;
+            padding: 0;
+        }
+        
+        &::before {
+            content: '';
+            width: 30px;
+            height: 65%;
+            position: absolute;
+            top: 50%;
+            left: -15px;
+            transform: translateY(-50%);
+            background: $mint;
+            border-radius: 50%;
+            transition-duration: 250ms;
+        }
+        
+        &:hover {
             &::before {
-                bottom: 0;
-                left: 0;
-            }
-            
-            &::after{
-                top: 0;
-                right: 0;
+                transform: translateY(-50%) scale(1.2);
             }
             
         }
+
     }
     
     @media screen and (max-width: 768px) {
@@ -1356,7 +1378,7 @@ body > section, body > main {
 
 #profile {
     width: 100%;
-    padding: 50px 0;
+    padding: 100px 0;
     
     .profile {
         background: #fff;

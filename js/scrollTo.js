@@ -1,5 +1,6 @@
 var ScrollTo = (function() {
     
+    var windowWidth = window.innerWidth;
     var windowHeight = window.innerHeight;
     var $button = document.getElementsByClassName('scrollTo');
     
@@ -43,22 +44,26 @@ var ScrollTo = (function() {
 
     };
     
-    Object.keys($button).forEach(function(key) {
+    var ScrollTo = (function(){
         
-        var attr = $button[key].getAttribute('href').substring(1);
-        var element = document.getElementById(attr);
-        var height = element.clientHeight;
+          Object.keys($button).forEach(function(key) {
         
-        var elementTop = element.getBoundingClientRect().top + window.scrollY;
-        
-        var to =  height < windowHeight ? elementTop - windowHeight / 5 : elementTop;
-        
-        $button[key].addEventListener('click', function(event) {
-            scrollTo(document.documentElement, to, 1250);
-            event.preventDefault();
+            var attr = $button[key].getAttribute('href').substring(1);
+            var element = document.getElementById(attr);
+            var height = element.clientHeight;
+
+            var elementTop = element.getBoundingClientRect().top + window.scrollY;
+
+            var to = elementTop - 60;
+
+            $button[key].addEventListener('click', function(event) {
+                scrollTo(document.documentElement, to, 1250);
+                event.preventDefault();
+            });
+
         });
         
-    });
+    })();
     
 })();
 

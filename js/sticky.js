@@ -14,12 +14,21 @@ var Sticky = (function() {
         
     };
     
-    window.addEventListener('scroll', function() {
-       
-        throttle(stickyNav(), 80);
+    var eventListener = function() {
         
-    });
+        window.addEventListener('scroll', function() {
+       
+            throttle(stickyNav(), 80);
+
+        });
+        
+    };
     
-    stickyNav();
+    var Sticky = (function(){
+        
+        stickyNav();
+        eventListener();
+        
+    })();
 
 })();

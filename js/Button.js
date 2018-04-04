@@ -2,7 +2,7 @@ var Button = (function(){
     
     var $button = document.getElementsByClassName('button');
     
-    var createRipple = function (e) {
+    var createRipple = function (event) {
     
         var elemet = this,
             circle = document.createElement('div'),
@@ -12,8 +12,8 @@ var Button = (function(){
         elemet.getBoundingClientRect
 
         circle.style.width = circle.style.height = d + 'px';
-        circle.style.left = e.clientX - rect.left - d / 2 + 'px';
-        circle.style.top = e.clientY - rect.top - d / 2 + 'px';
+        circle.style.left = event.clientX - rect.left - d / 2 + 'px';
+        circle.style.top = event.clientY - rect.top - d / 2 + 'px';
 
         circle.classList.add('ripple');
 
