@@ -33,24 +33,6 @@ var MessageTo = (function() {
     
 })();
 
-var Menu = (function() {
-    
-    var menu = document.getElementById('nav');
-    var btn = document.getElementById('btn-menu');
-    
-    var eventListener = (function(){
-        
-        menu.addEventListener('click', function(event){
-            
-            if (window.innerWidth <= 768)
-                btn.checked = false;
-            
-        });
-        
-    })();
-    
-})();
-
 document.addEventListener("DOMContentLoaded", function (event) {
     document.body.classList.remove('nojs');
     document.body.classList.add('loaded');
