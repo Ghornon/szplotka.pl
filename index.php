@@ -18,13 +18,12 @@
 
     <link href="https://fonts.googleapis.com/css?family=Hind|Kalam|Lato:900" rel="stylesheet">
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css<?php echo "?" . time(); ?>" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-
-
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+    
     <!-- Title -->
-    <title>ButtonStudio.net</title>
+    <title>Szplotka.pl</title>
 
 </head>
 
@@ -44,7 +43,6 @@
     *		unsplash.com
     *       getbootstrap.com
     *		google.com/fonts
-    *		jquery.com
     *       daneden.github.io/animate.css/
     *       fontawesome.io
     
@@ -66,13 +64,15 @@
     
     <section id="intro">
         
+        <!-- Intro topbar -->
+
         <header class="topbar container">
-            
+
             <div class="row">
-                
+
                 <div class="logo col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-                
-                    <img src="" alt="logo">
+
+<!--                    <img src="images/logo.png" alt="logo">-->
 
                 </div>
 
@@ -81,54 +81,34 @@
                     <label for="btn-menu"><h4>Menu</h4> <span class="hamburger"></span></label>
 
                 </div>
-                
+
             </div>
-            
+
         </header>
-        
+
+        <!-- Main content -->
+
         <div class="intro">
-            
-            <h1 class="display-1">Szplotka.pl</h1>
-            <h2>Gabinet wspierania rozwoju dzieci, młodzieży oraz osób dorosłych</h2>
-            
+
+<!--            <h1 class="display-1">Szplotka.pl</h1>-->
+            <img src="images/logo.png" alt="logo">
+            <h2>Prywatny gabinet wspierania rozwoju dzieci, młodzieży oraz osób dorosłych</h2>
+
         </div>
-        
+
+        <!-- Address -->
+
         <address class="map">
-            
+
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.430769626756!2d19.96647921589217!3d49.608483055551886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47160a812dafbe35%3A0x22cbbb8071e35c9f!2sPoniatowskiego+6%2C+34-700+Rabka-Zdr%C3%B3j!5e0!3m2!1spl!2spl!4v1522152650398"></iframe>
-            
+
         </address>
-        
+
     </section>
     
     <!-- Section nav -->
     
-    <nav id="nav">
-        
-        <header class="header">
-            
-            <ul>
-                <li>Menu</li>
-                <li><label for="btn-menu">Close <i class="fa fa-times"></i></label></li>
-            </ul>
-            
-        </header>
-        
-        <ul class="menu">
-            <li class="active"><a href="#intro" class="scrollTo">Strona główna</a></li>
-            <li>
-                <a href="#about" class="scrollTo">O nas</a>
-                <ul class="sub-menu">
-                    <li><a href="#">Agnieszka Burek-Blacha</a></li>
-                    <li><a href="#">Ewelina Janczy</a></li>
-                    <li><a href="#">Urszula Baran</a></li>
-                </ul>
-            </li>
-            <li><a href="#offer" class="scrollTo">Nasza oferta</a></li>
-            <li><a href="#contact" class="scrollTo">Kontakt</a></li>
-        </ul>
-        
-    </nav>
+    <?php require_once('./templates/nav.php'); ?>
     
     <!-- Section topbar -->
     
@@ -137,20 +117,28 @@
         <div class="container-fluid">
             
             <div class="row">
-            
-                <div class="logo col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                
+                <!-- Logo image -->
+                
+                <div class="logo col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 
-                    <img src="" alt="logo">
+                    <a href="./"><img src="images/logo.png" alt="logo"></a>
 
                 </div>
-
+                
+                <!-- Logo text -->
+                
+<!--
                 <header class="header col-xl-4 col-lg-4 col-md-4 d-none d-sm-none d-md-block text-center">
 
                     <h2>Szplotka.pl</h2>
 
                 </header>
-
-                <div class="menu col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 text-right">
+-->
+                
+                <!-- Nav button -->
+                
+                <div class="menu col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 text-right">
 
                     <label for="btn-menu"><h5>Menu</h5> <span class="hamburger"></span></label>
 
@@ -170,6 +158,8 @@
             
             <div class="row">
                 
+                <!-- Offer list -->
+                
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                 
                     <ul class="offer">
@@ -182,7 +172,9 @@
                     </ul>
 
                 </div>
-
+                
+                <!-- Banner -->
+                
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 wrapper">
 
                     <div class="row">
@@ -192,7 +184,7 @@
                             <div class="banner nth-0">
                                 
                                 <img src="images/banner_1.jpg" alt="banner">
-                                <h3 class="rotate">Przyjemnie</h3>
+                                <h3 class="rotate">Psycholog</h3>
                                 
                             </div>
                             
@@ -207,7 +199,7 @@
                                     <div class="banner nth-1">
                                         
                                         <img src="images/banner_2.jpg" alt="banner">
-                                        <h3>Wygodnie</h3>
+                                        <h3>Logopeda</h3>
                                         
                                     </div>
                                     
@@ -222,7 +214,7 @@
                                     <div class="banner nth-1">
                                        
                                         <img src="images/banner_3.jpg" alt="banner">
-                                        <h3>Profesjonalnie</h3>
+                                        <h3>Pedagog</h3>
                                         
                                     </div>
                                     
@@ -236,6 +228,8 @@
 
                 </div>
                 
+                <!-- End -->
+                
             </div>
             
         </div>
@@ -246,144 +240,7 @@
     
     <main id="main">
         
-        <section id="profile">
-            
-            <div class="container profile">
-                
-                <div class="row">
-                    
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 header">
-                        
-                        <img src="images/about_1.jpg" alt="Profile picture">
-                        
-                    </div>
-                    
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 header">
-                        
-                        <h1 class="display-4">Agnieszka Burek-Blacha</h1>
-                        <h4>Psycholog z wykształceniem pedagogicznym, Terapeuta metody SI (integracji sensorycznej), Specjalista ds. odżywiania i suplementacji.</h4>
-                        
-                    </div>
-                    
-                </div>
-                
-                <div class="row">
-                    
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 bar">
-                        
-                        <h1>Edukacja</h1>
-                        
-                    </div>
-                    
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 bar">
-                        
-                        <hr>
-                        
-                    </div>
-                    
-                </div>
-                
-                <article class="row">
-                    
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-                        
-                        <h5 class="date">2012 rok</h5>
-                        
-                    </div>
-                    
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
-                        
-                        <h3>Uniwersytet Śląski</h3>
-                        <p>Katowice - jednolite studia magisterskie- Psychologia</p>
-                        
-                    </div>
-                    
-                </article>
-                
-                <article class="row">
-                    
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-                        
-                        <h5 class="date">2015 rok</h5>
-                        
-                    </div>
-                    
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
-                        
-                        <h3>Politechnika Krakowska</h3>
-                        <p>Kraków - studia podyplomowe - Psychologia i Pedagogika (uzyskanie kwalifikacji pedagogicznych)</p>
-                        
-                    </div>
-                    
-                </article>
-                
-                <article class="row">
-                    
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-                        
-                        <h5 class="date">2017 rok</h5>
-                        
-                    </div>
-                    
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
-                        
-                        <h3>A4academy</h3>
-                        <p>Kraków - kurs Specjalista ds. odżywiania i suplementacji w sporcie</p>
-                        
-                    </div>
-                    
-                </article>
-                
-                <article class="row">
-                    
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-                        
-                        <h5 class="date">2017 rok</h5>
-                        
-                    </div>
-                    
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
-                        
-                        <h3>KIRE</h3>
-                        <p>Kraków- studia podyplomowe- Integracja Sensoryczna</p>
-                        
-                    </div>
-                    
-                </article>
-                
-                <div class="row">
-                    
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 bar">
-                        
-                        <h1>Publikacja</h1>
-                        
-                    </div>
-                    
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 bar">
-                        
-                        <hr>
-                        
-                    </div>
-                    
-                </div>
-                
-                <article class="row">
-                    
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        
-                        <p class="text-justify">Oprócz pracy w gabinecie wspierania rozwoju „Szplotka” pracuję również jako psycholog- nauczyciel w Zespole Szkół Specjalnych im. A. Szebesty w Rabce- Zdroju oraz w Śląskim Centrum Rehabilitacyjno- Uzdrowiskowym w Rabce- Zdroju na oddziale rehabilitacji ogólnoustrojowej osób dorosłych.</p>
-                        
-                        <p class="text-justify">Doświadczenie zawodowe zdobywałam w takich placówkach jak Poradnia Psychologiczno- Pedagogiczna w Nowym Targu oraz przedszkole prywatne „Wesoły Korowód” w Nowym Targu. Ponadto praktykowałam psychologię na Oddziale Psychiatrii w Szpitalu Miejskim w Rudzie Śląskiej oraz w Ośrodku Pomocy Dzieciom i Rodzinie w Rudzie Śląskiej. Odbyłam również praktykę z zakresu Integracji Sensorycznej w Specjalnym Ośrodku Szkolno- Wychowawczym w Nowym Targu.</p>
-                        
-                        <p class="text-justify">W wolnych chwilach zajmuje się pisaniem artykułów dla portalu studenckiego „Więc Jestem” i uczestniczę w specjalistycznych szkoleniach, aby poszerzać swoją wiedzę. W pracy zawodowej opieram się przede wszystkim na budowaniu opartej na zaufaniu relacji z klientem, uszanowaniu jego wartości oraz chęci niesienia pomocy.</p>
-                        
-                    </div>
-                    
-                </article>
-                
-            </div>
-            
-        </section>
+        <?php require_once('./templates/main.php'); ?>
         
     </main>
     
@@ -395,46 +252,76 @@
             
             <div class="row">
                
+                <!-- Form -->
+               
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     
-                    <form action="mail.php" class="contatc-form" id="contact-form">
+                    <form action="mail.php" class="contact-form" id="contact-form" method="post">
                         
                         <input type="text" name="name" id="name" placeholder="Imię i nazwisko">
                         <input type="email" name="email" id="email" placeholder="E-mail">
                         <textarea name="message" id="message" cols="30" rows="10" placeholder="Wiadomość"></textarea>
-                        <submit id="send" class="button">Wyślij</submit>
+                        <button id="send" class="button">Wyślij</button>
                         
                     </form>
                     
                 </div>
                 
+                <!-- Address map -->
+                
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     
-                    <div class="map">
+                    <address class="map">
                         
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.430769626756!2d19.96647921589217!3d49.608483055551886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47160a812dafbe35%3A0x22cbbb8071e35c9f!2sPoniatowskiego+6%2C+34-700+Rabka-Zdr%C3%B3j!5e0!3m2!1spl!2spl!4v1522152650398"></iframe>
                         
-                    </div>
+                    </address>
                     
                 </div>
+                
+                <!-- End -->
                 
             </div>
             
         </div>
         
-        <foooter id="footer">
-            
-            Szplotka.pl by <a href="http://buttonstudio.net/">ButtonStudio.net</a> 2018 &copy; All rights reserved!
-
-        </foooter>
         
     </section>
+    
+    <!-- Footer -->
+
+    <footer id="footer">
+
+        <p>Szplotka.pl by <a href="http://buttonstudio.net/">ButtonStudio.net</a> 2018 &copy; All rights reserved!</p>
+
+    </footer>
+    
+    <!-- Footer -->
+    
+    <div id="modal">
+        
+        <header class="header">
+            
+            Status wiadomości
+            
+        </header>
+        
+        <div class="body">
+            
+            Lorem ipsum dolor sit amet.
+            
+        </div>
+        
+    </div>
+    
+    <!-- Scripts -->
     
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <script src="js/main.js"></script>
     <script src="js/Button.js"></script>
-    <script src="js/Sticky.js"></script>
-    <script src="js/ScrollTo.js"></script>
+    <script src="js/Mail.js"></script>
+    <script src="js/sticky.js"></script>
+    <script src="js/scrollTo.js"></script>
 
 </body>
 

@@ -1,280 +1,46 @@
-<!DOCTYPE html>
-<html lang="pl">
+<?php 
 
-<head>
-
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <meta name="keywords" content="szplotka, pl, gabinet, logopeda, pedagog, psycholog, neurologopeda, zdrowie">
-    <meta name="description" content="Szplotka.pl - gabinet logopedyczno-pedagogiczny">
-
-    <meta property="og:image" content="images/ogimage.jpg" />
-
-    <!-- Text/css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Hind|Kalam|Lato:900" rel="stylesheet">
-
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-
-
-    <!-- Title -->
-    <title>Szplotka.pl</title>
-
-</head>
-
-<body class="">
-
-    <!------------------------------------------------------------------
-    ╔═══╦╗───────────────╔╗───────╔╗───────────────────────────────╔╗───
-    ║╔═╗║║───────────────║║─────╔╦╝╚╗──────────────────────────────║║───
-    ║╚═╝║║╔══╦══╦══╦══╗╔═╝╠══╦═╗║╠╗╔╝╔══╦══╦══╦╗─╔╗╔╗╔╦╗─╔╗╔══╦══╦═╝╠══╗
-    ║╔══╣║║║═╣╔╗║══╣║═╣║╔╗║╔╗║╔╗╬╝║║─║╔═╣╔╗║╔╗║║─║║║╚╝║║─║║║╔═╣╔╗║╔╗║║═╣
-    ║║──║╚╣║═╣╔╗╠══║║═╣║╚╝║╚╝║║║║─║╚╗║╚═╣╚╝║╚╝║╚═╝║║║║║╚═╝║║╚═╣╚╝║╚╝║║═╣
-    ╚╝──╚═╩══╩╝╚╩══╩══╝╚══╩══╩╝╚╝─╚═╝╚══╩══╣╔═╩═╗╔╝╚╩╩╩═╗╔╝╚══╩══╩══╩══╝
-    ───────────────────────────────────────║║─╔═╝║────╔═╝║──────────────
-    ───────────────────────────────────────╚╝─╚══╝────╚══╝──────────────
+if ( isset( $_GET['page'] ) )
+    $page = $_GET['page'];
+else 
+    $page = 'index';
     
-    *    Proudly supported by:
-    *		unsplash.com
-    *       getbootstrap.com
-    *		google.com/fonts
-    *		jquery.com
-    *       daneden.github.io/animate.css/
-    *       fontawesome.io
-    
-    ------------------------------------------------------------------->
-    
-    <!-- Section Preloader -->
+switch ( $page ) {
 
-    <div id="preloader">
+    case 'about':
         
-        <div class="loader"></div>
-        
-    </div>
-    
-    <!-- Menu button -->
-    
-    <input type="checkbox" name="btn-menu" id="btn-menu">
-    
-    <!-- Section Intro -->
-    
-    <section id="intro">
-        
-        <!-- Intro topbar -->
-        
-        <header class="topbar container">
+        if (isset($_GET['about'])) {
+            $about = $_GET['about'];
             
-            <div class="row">
-                
-                <div class="logo col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-                
-                    <img src="images/logo.png" alt="logo">
-
-                </div>
-
-                <div class="menu col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-
-                    <label for="btn-menu"><h4>Menu</h4> <span class="hamburger"></span></label>
-
-                </div>
-                
-            </div>
-            
-        </header>
-        
-        <!-- Main content -->
-        
-        <div class="intro">
-            
-            <h1 class="display-1">Szplotka.pl</h1>
-            <h2>Gabinet wspierania rozwoju dzieci, młodzieży oraz osób dorosłych</h2>
-            
-        </div>
-        
-        <!-- Address -->
-        
-        <address class="map">
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.430769626756!2d19.96647921589217!3d49.608483055551886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47160a812dafbe35%3A0x22cbbb8071e35c9f!2sPoniatowskiego+6%2C+34-700+Rabka-Zdr%C3%B3j!5e0!3m2!1spl!2spl!4v1522152650398"></iframe>
-            
-        </address>
-        
-    </section>
-    
-    <!-- Section nav -->
-    
-    <nav id="nav">
-        
-        <!-- Nav buttons -->
-        
-        <header class="header">
-            
-            <ul>
-                <li>Menu</li>
-                <li><label for="btn-menu">Close <i class="fa fa-times"></i></label></li>
-            </ul>
-            
-        </header>
-        
-        <!-- Menu -->
-        
-        <ul class="menu">
-            <li class="active"><a href="#intro" class="scrollTo">Strona główna</a></li>
-            <li>
-                <a href="#about" class="scrollTo">O nas</a>
-                <ul class="sub-menu">
-                    <li><a href="#">Agnieszka Burek-Blacha</a></li>
-                    <li><a href="#">Ewelina Janczy</a></li>
-                    <li><a href="#">Urszula Baran</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#schedule" class="scrollTo">Harmonogram</a>
-                <ul class="sub-menu">
-                    <li><a href="#work-schedule" class="scrollTo">Godziny pracy</a></li>
-                    <li><a href="#tarrif-schedule" class="scrollTo">Cennik</a></li>
-                </ul>
-            </li>
-            <li><a href="#offer" class="scrollTo">Nasza oferta</a></li>
-            <li><a href="#contact" class="scrollTo">Kontakt</a></li>
-        </ul>
-        
-    </nav>
-    
-    <!-- Section topbar -->
-    
-    <section id="topbar">
-        
-        <div class="container-fluid">
-            
-            <div class="row">
-                
-                <!-- Logo image -->
-                
-                <div class="logo col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
-
-                    <img src="images/logo.png" alt="logo">
-
-                </div>
-                
-                <!-- Logo text -->
-                
-                <header class="header col-xl-4 col-lg-4 col-md-4 d-none d-sm-none d-md-block text-center">
-
-                    <h2>Szplotka.pl</h2>
-
-                </header>
-                
-                <!-- Nav button -->
-                
-                <div class="menu col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 text-right">
-
-                    <label for="btn-menu"><h5>Menu</h5> <span class="hamburger"></span></label>
-
-                </div>
-
-            </div>
-            
-        </div>
-        
-    </section>
-    
-    <!-- Section banner -->
-    
-    <section id="banner">
-        
-        <div class="container">
-            
-            <div class="row">
-                
-                <!-- Offer list -->
-                
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                
-                    <ul class="offer">
-                        <li><a href="#pedagog" class="scrollTo">Pedagog <i class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#psycholog" class="scrollTo">Psycholog <i class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#logopeda-neurologopeda" class="scrollTo">Logopeda / Neurologopeda <i class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#wczesne-wspomaganie-rozwoju" class="scrollTo">Wczesne wspomaganie rozwoju <i class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#profilaktyka-zdrowego-odzywiania" class="scrollTo">Profilaktyka zdrowego odżywiania <i class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#oferta-zespolu" class="scrollTo">Oferta zespołu <i class="fa fa-angle-right"></i></a></li>
-                    </ul>
-
-                </div>
-                
-                <!-- Banner -->
-                
-                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 wrapper">
-
-                    <div class="row">
+            switch ($about) {
+                case 1:
+                    require_once('Agnieszka-Burek-Blacha.php');
+                    break;
+                    
+                case 2:
+                    
+                    require_once('Ewelina-Janczy.php');
+                    break;
+                    
+                case 3:
+                    
+                    require_once('Urszula-Baran.php');
+                    break;
                         
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                            
-                            <div class="banner nth-0">
-                                
-                                <img src="images/banner_1.jpg" alt="banner">
-                                <h3 class="rotate">Przyjemnie</h3>
-                                
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            
-                            <div class="row">
-                                
-                                <div class="col-12">
-                                    
-                                    <div class="banner nth-1">
-                                        
-                                        <img src="images/banner_2.jpg" alt="banner">
-                                        <h3>Wygodnie</h3>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                
-                            </div>
-                            
-                            <div class="row">
-                                
-                                <div class="col-12">
-                                    
-                                    <div class="banner nth-1">
-                                       
-                                        <img src="images/banner_3.jpg" alt="banner">
-                                        <h3>Profesjonalnie</h3>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
-
-                </div>
-                
-                <!-- End -->
-                
-            </div>
+                default:
+                    
+                    echo "Brak danych";
+                    
+            }
             
-        </div>
-        
-    </section>
-    
-    <!-- Main -->
-    
-    <main id="main">
-        
+        }
+
+        break;
+
+    default:
+
+        ?>
+
         <!-- Section about -->
         
         <section id="about">
@@ -307,13 +73,14 @@
                             </div>
                             
                             <ul class="nav">
-                                <li><a href="#contact" class="scrollTo messageTo" data-msg="Agnieszka Burek-Blacha"><i class="fa fa-commenting nth-1"></i></a></li>
-                                <li><a href="#" class="heart"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#contact" class="scrollTo messageTo" data-msg="Agnieszka Burek-Blacha"><i class="fa fa-commenting nth-1"></i></a>
+                                </li>
+<!--                                <li><a href="#" class="heart"><i class="fa fa-heart"></i></a></li>-->
                             </ul>
                             
                             <div class="button">
                                 
-                                <a href="Agnieszka-Burek-Blacha.html#profile">Biografia</a>
+                                <a href="Agnieszka-Burek-Blacha">Biografia</a>
                                 
                             </div>
                             
@@ -346,12 +113,12 @@
                             
                             <ul class="nav">
                                 <li><a href="#contact" class="scrollTo messageTo" data-msg="Ewelina Janczy"><i class="fa fa-commenting nth-2"></i></a></li>
-                                <li><a href="#" class="heart"><i class="fa fa-heart"></i></a></li>
+<!--                                <li><a href="#" class="heart"><i class="fa fa-heart"></i></a></li>-->
                             </ul>
                             
                             <div class="button">
                                 
-                                <a href="#">Biografia</a>
+                                <a href="Ewelina-Janczy">Biografia</a>
                                 
                             </div>
                             
@@ -384,12 +151,12 @@
                             
                             <ul class="nav">
                                 <li><a href="#contact" class="scrollTo messageTo" data-msg="Urszula Baran"><i class="fa fa-commenting nth-3"></i></a></li>
-                                <li><a href="#" class="heart"><i class="fa fa-heart"></i></a></li>
+<!--                                <li><a href="#" class="heart"><i class="fa fa-heart"></i></a></li>-->
                             </ul>
                             
                             <div class="button">
                                 
-                                <a href="#">Biografia</a>
+                                <a href="Urszula-Baran">Biografia</a>
                                 
                             </div>
                             
@@ -419,7 +186,7 @@
                     
                     <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12"> 
                         
-                        <div class="schedule nth-1">
+                        <div class="schedule nth-1 hideme">
 
                             <header class="header">
 
@@ -444,28 +211,31 @@
                                     <tbody>
 
                                         <tr>
-                                            <th scope="row">Pon</th>
-                                            <td>9:30 - 11:30</td>
+                                            <th scope="row">Poniedziałek</th>
+                                            <td>9:00 - 12:00</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Wt</th>
-                                            <td>9:30 - 13:30</td>
+                                            <th scope="row">Wtorek</th>
+                                            <td>9:00 - 12:00</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Śr</th>
-                                            <td>9:30 - 12:30</td>
+                                            <th scope="row">Środa</th>
+                                            <td>9:00 - 12:00</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Czw</th>
-                                            <td>16:30 - 19:30</td>
+                                            <th scope="row">Czwartek</th>
+                                            <td>telefonicznie</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Pt</th>
-                                            <td>16:30 - 19:30</td>
+                                            <th scope="row">Piątek</th>
+                                            <td>15:30 - 19:00</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Sobota</th>
                                             <td>telefonicznie</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="text-center">Umów się na <a href="https://www.znanylekarz.pl/agnieszka-burek-blacha/psycholog-terapeuta/rabka-zdroj">znanylekarz.pl</a></td>
                                         </tr>
 
                                     </tbody>
@@ -482,7 +252,7 @@
                     
                     <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
                         
-                        <div class="schedule nth-2">
+                        <div class="schedule nth-2 hideme">
 
                             <header class="header">
 
@@ -507,23 +277,23 @@
                                     <tbody>
 
                                         <tr>
-                                            <th scope="row">Pon</th>
-                                            <td>nie przyjmuje</td>
+                                            <th scope="row">Poniedziałek</th>
+                                            <td>telefonicznie</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Wt</th>
+                                            <th scope="row">Wtorek</th>
                                             <td>16:00 - 19:30</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Śr</th>
-                                            <td>nie przyjmuje</td>
+                                            <th scope="row">Środa</th>
+                                            <td>telefonicznie</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Czw</th>
-                                            <td>nie przyjmuje</td>
+                                            <th scope="row">Czwartek</th>
+                                            <td>telefonicznie</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Pt</th>
+                                            <th scope="row">Piątek</th>
                                             <td>8:00 - 11:00</td>
                                         </tr>
                                         <tr>
@@ -545,7 +315,7 @@
                     
                     <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
                         
-                        <div class="schedule nth-3">
+                        <div class="schedule nth-3 hideme">
 
                             <header class="header">
 
@@ -570,28 +340,28 @@
                                     <tbody>
 
                                         <tr>
-                                            <th scope="row">Pon</th>
+                                            <th scope="row">Poniedziałek</th>
                                             <td>15:30 - 19:30</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Wt</th>
+                                            <th scope="row">Wtorek</th>
                                             <td class="pop">15:30 - 19:30* <span class="popover">(po wcześniejszym uzgodnieniu)</span></td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Śr</th>
+                                            <th scope="row">Środa</th>
                                             <td>15:30 - 19:30</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Czw</th>
+                                            <th scope="row">Czwartek</th>
                                             <td>15:30 - 19:30</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Pt</th>
-                                            <td>nie przyjmuje</td>
+                                            <th scope="row">Piątek</th>
+                                            <td>telefonicznie</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Sobota</th>
-                                            <td>nie przyjmuje</td>
+                                            <td>telefonicznie</td>
                                         </tr>
 
                                     </tbody>
@@ -613,7 +383,7 @@
 
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
 
-                        <div class="schedule nth-4">
+                        <div class="schedule nth-4 hideme">
 
                             <header class="header">
 
@@ -639,23 +409,23 @@
 
                                         <tr>
                                             <th scope="row">Konsultacja psychologiczna</th>
-                                            <td>50 zł / 45 min</td>
+                                            <td>50 zł / 45 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Pomoc psychologiczna</th>
-                                            <td>50 zł / 60 min</td>
+                                            <td>50 zł / 60 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Pomoc psychologiczna</th>
-                                            <td>70 zł / 90 min</td>
+                                            <td>70 zł / 90 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Wsparcie psychologiczne</th>
-                                            <td>50 zł / 45 min</td>
+                                            <td>50 zł / 45 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Poradnictwo psychologiczne</th>
-                                            <td>60 zł / 60 min</td>
+                                            <td>60 zł / 60 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Pisemna opinia</th>
@@ -676,7 +446,7 @@
 
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
 
-                        <div class="schedule nth-5">
+                        <div class="schedule nth-5 hideme">
 
                             <header class="header">
 
@@ -702,31 +472,31 @@
 
                                         <tr>
                                             <th scope="row">Diagnoza pedagogiczna</th>
-                                            <td>70 zł / 60 min</td>
+                                            <td>70 zł / 60 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Diagnoza pedagogiczna</th>
-                                            <td>90 zł / 90 min</td>
+                                            <td>90 zł / 90 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Konsultacja pedagogiczna</th>
-                                            <td>50 zł / 45 min</td>
+                                            <td>50 zł / 45 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Terapia pedagogiczna</th>
-                                            <td>50 zł / 45 min</td>
+                                            <td>50 zł / 45 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Terapia pedagogiczna</th>
-                                            <td>60 zł / 60 min</td>
+                                            <td>60 zł / 60 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Zajęcia wyrównawcze</th>
-                                            <td>50 zł / 60 min</td>
+                                            <td>50 zł / 60 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Odrabianie lekcji</th>
-                                            <td>50 zł / 60 min</td>
+                                            <td>50 zł / 60 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Pisemna opinia</th>
@@ -747,7 +517,7 @@
 
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
 
-                        <div class="schedule nth-6">
+                        <div class="schedule nth-6 hideme">
 
                             <header class="header">
 
@@ -773,19 +543,19 @@
 
                                         <tr>
                                             <th scope="row">Diagnoza logopedyczna</th>
-                                            <td>70 zł / 60 min</td>
+                                            <td>70 zł / 60 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Konsultacja logopedyczna</th>
-                                            <td>50 zł / 45 min</td>
+                                            <td>50 zł / 45 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Terapia logopedyczna (dzieci i dorośli)</th>
-                                            <td>50 zł / 45 min</td>
+                                            <td>50 zł / 45 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Wczesna interwencja logopedyczna</th>
-                                            <td>30 zł / 30 min</td>
+                                            <td>30 zł / 30 min.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Pisemna opinia</th>
@@ -806,11 +576,11 @@
 
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 offset-xl-4">
 
-                        <div class="schedule  nth-7">
+                        <div class="schedule nth-7 hideme">
 
                             <header class="header">
 
-                                <h3>Zespołu</h3>
+                                <h3>Zespół</h3>
                                 <h4>Cennik</h4>
 
                             </header>
@@ -831,8 +601,8 @@
                                     <tbody>
 
                                         <tr>
-                                            <th scope="row">Wizyt domowe</th>
-                                            <td>ustalany indywidualnie</td>
+                                            <th scope="row">Wizyt domowe w Nowym Targu</th>
+                                            <td>ustalane indywidualnie</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Pakiety dla stałych Klientów </th>
@@ -841,6 +611,11 @@
                                         <tr>
                                             <th scope="row">Pisemna opinia</th>
                                             <td>dla stałych klientów gratis</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th scope="row">Uwaga</th>
+                                            <td>Nie przyjmuje na NFZ, jestśmy gabinetem prywatnym</td>
                                         </tr>
 
                                     </tbody>
@@ -871,7 +646,7 @@
                 
                 <header class="header">
                 
-                    <h1 class="display-1">Nasza oferta</h1>
+                    <h1 class="display-3">Nasza oferta</h1>
 
                 </header>
                 
@@ -906,7 +681,7 @@
                                 <p>pomoc psychologiczna</p>
                                 <p>profilaktyka zdrowia psychicznego</p>
 
-                                <h5>Zajmujemy się zagadnieniami:</h5>
+                                <h5>Zajmujemy się zagadnieniami</h5>
                                 <p>lęków, nerwic, stanów depresyjnych, problemów emocjonalnych, trudności wychowawczych, kryzysów</p>
                                 
                             </div>
@@ -978,7 +753,7 @@
                             
                             <div class="content">
                                 
-                                <h5>Dla szkół i innych placówek oraz osób chętnych:</h5>
+                                <h5>Dla szkół i innych placówek oraz osób chętnych</h5>
                                 <p>szkolenia tematyczne</p>
                                 <p>warsztaty</p>
                                 <p>grupy wsparcia</p>
@@ -1043,12 +818,12 @@
                             
                             <div class="content">
                                 
-                                <h5>OFERTA DLA DZIECI:</h5>
+                                <h5>OFERTA DLA DZIECI</h5>
                                 
                                 <p>stymulowanie rozwoju posychoruchowego oraz komunikacyjnego dziecka z pomocą wybranych metod (m.in. metoda SI, metoda ruchu rozwijającego W. Sherborne, Trening Umiejętności Społecznych)</p>
                                 <p>systematyczna ocena postępów dziecka</p>
  
-                                <h5>OFERTA DLA RODZICÓW:</h5>
+                                <h5>OFERTA DLA RODZICÓW</h5>
                                 
                                 <p>wsparcie w procesie akceptacji niepełnosprawności/ braku sprawności dziecka</p>
                                 <p>pomoc w rozpoznawaniu oraz interpretacji zachowań dziecka</p>
@@ -1069,88 +844,9 @@
             </div>
             
         </section>
-        
-    </main>
-    
-    <!-- Section contact -->
-    
-    <section id="contact">
-        
-        <div class="container">
-            
-            <div class="row">
-               
-                <!-- Form -->
-               
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    
-                    <form action="mail.php" class="contact-form" id="contact-form">
-                        
-                        <input type="text" name="name" id="name" placeholder="Imię i nazwisko">
-                        <input type="email" name="email" id="email" placeholder="E-mail">
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Wiadomość"></textarea>
-                        <button id="send" class="button">Wyślij</button>
-                        
-                    </form>
-                    
-                </div>
-                
-                <!-- Address map -->
-                
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    
-                    <address class="map">
-                        
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.430769626756!2d19.96647921589217!3d49.608483055551886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47160a812dafbe35%3A0x22cbbb8071e35c9f!2sPoniatowskiego+6%2C+34-700+Rabka-Zdr%C3%B3j!5e0!3m2!1spl!2spl!4v1522152650398"></iframe>
-                        
-                    </address>
-                    
-                </div>
-                
-                <!-- End -->
-                
-            </div>
-            
-        </div>
-        
-        
-    </section>
-    
-    <!-- Footer -->
 
-    <foooter id="footer">
+        <?php
 
-        <p>Szplotka.pl by <a href="http://buttonstudio.net/">ButtonStudio.net</a> 2018 &copy; All rights reserved!</p>
+}
 
-    </foooter>
-    
-    <!-- Footer -->
-    
-    <div id="modal">
-        
-        <header class="header">
-            
-            Status wiadomości
-            
-        </header>
-        
-        <div class="body">
-            
-            Lorem ipsum dolor sit amet.
-            
-        </div>
-        
-    </div>
-    
-    <!-- Scripts -->
-    
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <script src="js/main.js"></script>
-    <script src="js/Button.js"></script>
-    <script src="js/Mail.js"></script>
-    <script src="js/Sticky.js"></script>
-    <script src="js/ScrollTo.js"></script>
-
-</body>
-
-</html>
+?>

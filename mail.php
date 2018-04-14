@@ -2,7 +2,7 @@
 
 //Header location
 
-if (!isset($_POST['name']) && !isset($_POST['email']) && !isset($_POST['subject']) && !isset($_POST['message'])) {
+if (!isset($_POST['name']) && !isset($_POST['email']) && !isset($_POST['message'])) {
 
     header('Location: index.php');
     exit();
@@ -10,17 +10,6 @@ if (!isset($_POST['name']) && !isset($_POST['email']) && !isset($_POST['subject'
 }
 
 //Set Get's variables
-
-if (isset($_GET['lang'])) {
-
-    if ($_GET['lang'] == "pl")
-        $lang = ($_GET['lang']);
-    else 
-        $lang = "en";
-
-} else {
-    $lang = "en";
-}
 
 if (isset($_GET['ajax'])) {
 
@@ -66,7 +55,7 @@ function check() {
 
 }
 
-function respond( $type, $mute, $lang ) {
+function respond( $type, $mute ) {
 
     if ( $mute ) {
 
@@ -77,21 +66,10 @@ function respond( $type, $mute, $lang ) {
 
     } else {
 
-        if ( $lang != "pl" ) {
-
-            if ( $type )
-                echo "Message sent correctly!";
-            else
-                echo "Message didn't send correctly! Something went wrong!";
-
-        } else {
-
-            if ( $type )
-                echo "Wiadomość została wysłana poprawnie!";
-            else
-                echo "Wiadomość nie została wysłana poprawnie! Coś poszło nie tak!";
-
-        }
+        if ( $type )
+            echo "Wiadomość została wysłana poprawnie!";
+        else
+            echo "Wiadomość nie została wysłana poprawnie! Coś poszło nie tak!";
 
     }
          
@@ -103,27 +81,26 @@ if ( check() ) {
 
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=utf-8' . "<br>";
-    $subject = $_POST['subject'];
-    $from = "Message from: <br>Email: " . $_POST['email'] . "<br>Name: " . $_POST['name'] . "<br>----------------------------------------------<br>";
+    $from = "Wiadomość od: <br>Email: " . $_POST['email'] . "<br>" . $_POST['name'] . "<br>----------------------------------------------<br>";
     $message = $from . $_POST['message'];
 
-    if( @mail('kontakt@szplotka.pl', "Od: " . $_POST['email'], $message, $headers) ) {
+    if( @mail('kontakt@szplotka.pl', "Wiadomość od " . $_POST['email'], $message, $headers) ) {
 
-        respond(true, $ajax, $lang);
+        respond(true, $ajax);
 
     } else {
 
-        respond(false, $ajax, $lang);
+        respond(false, $ajax);
 
     }
 
 
 } else {
 
-    respond(false, $ajax, $lang);
+    respond(false, $ajax);
 
 }
 
-//respond(false, $ajax, $lang);
+//respond(false, $ajax);
 
 ?>

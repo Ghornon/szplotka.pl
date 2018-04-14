@@ -1,4 +1,4 @@
-var mail = (function(){
+var Mail = (function(){
     
     var button = document.getElementById('send');
     var modal = document.getElementById('modal');
@@ -10,7 +10,7 @@ var mail = (function(){
         message: document.getElementById('message'),
     }
     
-    var respond = function (type, lang) {
+    var respond = function (type) {
         
         var message = "";
         
@@ -33,38 +33,33 @@ var mail = (function(){
     
     var sendRequest = function (name, email, message) {
         
-        var xmlhttp = new XMLHttpRequest();
-
-        xmlhttp.onreadystatechange = function (data) {
-            
-            if (xmlhttp.readyState == XMLHttpRequest.DONE) { // XMLHttpRequest.DONE == 4
-                
-                if (xmlhttp.status == 200) {
-                    
-                    var respond = JSON.parse(data);
-            
-                        if (respond.status) {
-
-                            respond(true);
-
-                        } else {
-
-                            respond(false);
-
-                        }
-                    
-                } else if (xmlhttp.status == 400) {
-                    respond(false);
-                    
-                } else {
-                    respond(false);
+        function postAjax(url, data, success) {
+            var params = typeof data == 'string' ? data : Object.keys(data).map(
+                function (k) {
+                    return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
                 }
-            }
-            
-        };
+            ).join('&');
 
-        xmlhttp.open("GET", "mail.php", true);
-        xmlhttp.send();
+            var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+            xhr.open('POST', url);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState > 3 && xhr.status == 200) {
+                    success(xhr.responseText);
+                }
+            };
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send(params);
+            return xhr;
+        }
+        
+        postAjax('mail.php?ajax=true', { name: name, email: email, message: message }, function(data){ 
+            
+            var respondData = JSON.parse(data);
+            
+            respond(respondData.status);     
+            
+        });
 
     };
     
