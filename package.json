@@ -1,16 +1,16 @@
 {
   "name": "szplotka",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Szplotka.pl",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "szplotka"
+    "szplotka", "cabinet", "educator", "psychologist", "speach therapist"
   ],
   "author": "Szymon \"Button\" Guzik",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
