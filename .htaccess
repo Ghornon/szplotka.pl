@@ -4,6 +4,11 @@ Order Allow,Deny
 Deny from all
 </FilesMatch>
 
+## EXPIRES CACHING ##
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico|svg|iframe)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+
 RewriteEngine on
 RewriteRule Agnieszka-Burek-Blacha index.php?page=about&about=1
 RewriteRule Ewelina-Janczy index.php?page=about&about=2

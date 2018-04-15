@@ -1,3 +1,4 @@
+@import 'fonts.scss';
 @import 'colors.scss';
 @import 'variables.scss';
 @import 'keyframes.scss';
@@ -48,6 +49,14 @@ body {
     overflow-y: auto;
     
     #preloader {
+        display: none;
+    }
+    
+    .hideme {
+        opacity: 1;
+    }
+    
+    .map {
         display: none;
     }
 }
@@ -167,12 +176,8 @@ body {
                 padding: 0;
                 color: #fff;
                 cursor: pointer;
-                
-                h4 {
-                    margin: 0;
-                    padding: 0;
-                    line-height: 60px;
-                }
+                font-size: 1.5rem;
+                line-height: 60px;
                 
                 .hamburger {
                     margin: 25px 10px;
@@ -536,16 +541,14 @@ body > footer,
             display: flex;
             justify-content: flex-end;
             flex-direction: row;
-            
-            h5 {
-                margin: 0;
-                padding: 0;
-                line-height: 60px;
-                color: $gray;
-                text-transform: uppercase;
-                font-family: $fontBold;
-                text-decoration: underline;
-            }
+            margin: 0;
+            padding: 0;
+            line-height: 60px;
+            color: $gray;
+            text-transform: uppercase;
+            font-family: $fontBold;
+            text-decoration: underline;
+            font-size: 1.25rem;
             
             .hamburger {
                 margin: 28px 15px;

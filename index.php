@@ -8,26 +8,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <meta name="keywords" content="szplotka, pl, gabinet, logopeda, pedagog, psycholog, neurologopeda, zdrowie">
-    <meta name="description" content="Szplotka.pl - gabinet logopedyczno-pedagogiczny">
+    <meta name="keywords" content="szplotka, pl, szplotka.pl, gabinet, logopeda, pedagog, psycholog, neurologopeda, zdrowie, terapia, szplotka.pl, pomoc, wczesne wspomaganie rozwoju, rofilaktyka zdrowego odżywiania, rabka, Poniatowskiego 6, 34-700, Rabka-Zdrój, Agnieszka, Burek-Blacha, Ewelina, Janczy, Urszula, Baran">
+    <meta name="author" content="Szymon 'Button' Guzik">
 
     <meta property="og:image" content="images/ogimage.jpg" />
 
     <!-- Text/css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Hind|Kalam|Lato:900" rel="stylesheet">
-
-    <link href="css/style.css<?php echo "?" . time(); ?>" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+    <link href="css/style.css" rel="stylesheet">
     
     <!-- Title -->
     <title>Szplotka.pl</title>
 
 </head>
 
-<body class="">
+<body class="nojs">
 
     <!------------------------------------------------------------------
     ╔═══╦╗───────────────╔╗───────╔╗───────────────────────────────╔╗───
@@ -78,7 +75,7 @@
 
                 <div class="menu col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 
-                    <label for="btn-menu"><h4>Menu</h4> <span class="hamburger"></span></label>
+                    <label for="btn-menu">Menu <span class="hamburger"></span></label>
 
                 </div>
 
@@ -140,7 +137,7 @@
                 
                 <div class="menu col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 text-right">
 
-                    <label for="btn-menu"><h5>Menu</h5> <span class="hamburger"></span></label>
+                    <label for="btn-menu">Menu <span class="hamburger"></span></label>
 
                 </div>
 
@@ -316,12 +313,7 @@
     
     <!-- Scripts -->
     
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <script src="js/main.js"></script>
-    <script src="js/Button.js"></script>
-    <script src="js/Mail.js"></script>
-    <script src="js/sticky.js"></script>
-    <script src="js/scrollTo.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 
