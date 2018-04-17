@@ -93,7 +93,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.body.classList.remove('nojs');
     document.body.classList.add('loaded');
 });
-
-// EXPIRES CACHING
-var _theframe = document.getElementsByTagName("iframe");
-_theframe.contentWindow.location.href = _theframe.src;
