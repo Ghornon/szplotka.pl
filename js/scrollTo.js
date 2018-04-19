@@ -46,25 +46,20 @@ var ScrollTo = (function() {
     
     var eventListener = (function(){
         
-        Object.keys($button).forEach(function(key) {
-
+          Object.keys($button).forEach(function(key) {
+        
             var attr = $button[key].getAttribute('href').substring(1);
             var element = document.getElementById(attr);
+            var height = element.clientHeight;
 
-            if (element != null) {
-                
-                var height = element.clientHeight;
+            var elementTop = element.getBoundingClientRect().top + window.scrollY;
 
-                var elementTop = element.getBoundingClientRect().top + window.scrollY;
+            var to = elementTop - 60;
 
-                var to = elementTop - 60;
-
-                $button[key].addEventListener('click', function(event) {
-                    scrollTo(document.documentElement, to, 1250);
-                    event.preventDefault();
-                });   
-                
-            }
+            $button[key].addEventListener('click', function(event) {
+                scrollTo(document.documentElement, to, 1250);
+                event.preventDefault();
+            });
 
         });
         
