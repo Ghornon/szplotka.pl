@@ -11,7 +11,7 @@ const uglify = require('gulp-uglify');
 /* Compile Sass. */
 
 gulp.task('sass', function() {
-    return gulp.src('./css/*.scss') // Create a stream in the directory where our Sass files are located.
+    return gulp.src('./css/style.scss') // Create a stream in the directory where our Sass files are located.
     .pipe(sourcemaps.init())                
     .pipe(sass.sync().on('error', sass.logError)) // Compile Sass into style.css.
     .pipe(autoprefixer({
