@@ -245,6 +245,13 @@
         
         <div class="container">
             
+            <header class="header">
+                
+                <h1 class="display-3">Kontakt</h1>
+                <h2>Skontaktuj się z nami</h2>
+
+            </header>
+            
             <div class="row">
                
                 <!-- Form -->
@@ -256,7 +263,7 @@
                         <input type="text" name="name" id="name" placeholder="Imię i nazwisko">
                         <input type="email" name="email" id="email" placeholder="E-mail">
                         <textarea name="message" id="message" cols="30" rows="10" placeholder="Wiadomość"></textarea>
-                        <button id="send" class="button">Wyślij</button>
+                        <button id="send" class="button">Wyślij wiadomość</button>
                         
                     </form>
                     

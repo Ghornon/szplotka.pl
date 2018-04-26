@@ -265,8 +265,9 @@ body {
         box-shadow: $boxShadow;
         z-index: 15;
         transition-duration: 250ms;
+        overflow: hidden; 
         
-        iframe {
+        & > iframe {
             width: 300px;
             height: 150px;
             border: 0; 
@@ -1296,6 +1297,30 @@ body > footer,
     
     .container {
         padding: 50px 0;
+        
+        & > .header {
+            width: 100%;
+            margin: 50px auto;
+            padding: 20px 40px;
+            border-radius: 5px;
+            z-index: 50;
+            position: relative;
+            overflow: hidden;
+            position: relative;
+            color: #fff;
+            text-align: center;
+
+            h1, h2 {
+                @include stroke(1px, rgba(0,0,0,.35));
+                font-family: $fontBold;
+                font-weight: 900;
+                text-transform: uppercase;
+                margin: 0;
+                padding: 0;
+            }
+
+        }
+        
     }
     
     .contact-form {
@@ -1351,7 +1376,8 @@ body > footer,
         iframe {
             box-shadow: $boxShadowLight;
             width: 100%;
-            min-height: 360px;
+            min-height: 400px;
+            max-height: 400px;
             height: 100%;
             border: 0;
             transition-duration: 250ms;
@@ -1381,6 +1407,10 @@ body > footer,
 @media screen and (max-width: 992px) {
     #contact .container {
         padding: 50px 20px 100px 20px;
+        
+        header .display-3 {
+            font-size: 3rem;
+        }
     }
 }
 

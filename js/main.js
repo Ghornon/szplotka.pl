@@ -90,7 +90,11 @@ var Hideme = (function() {
 })();
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    document.body.classList.add('loaded');
+    
+    setTimeout(function(){
+        document.body.classList.add('loaded');
+    }, 500);
+    
     var maps = document.getElementsByClassName('map');
     Object.keys(maps).forEach(function(key) {
         

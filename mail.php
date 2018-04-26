@@ -101,6 +101,6 @@ if ( check() ) {
 
 }
 
-//respond(false, $ajax);
+//respond(true, $ajax);
 
 ?>

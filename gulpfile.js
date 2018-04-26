@@ -24,7 +24,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('babel', function () {
-    return gulp.src(['js/Button.js', 'js/Mail.js', 'js/scrollTo.js', 'js/sticky.js', 'js/main.js'])   // Create a stream in the directory where our Sass files are located.
+    return gulp.src(['js/Button.js', 'js/Mail.js', 'js/ScrollTo.js', 'js/Sticky.js', 'js/main.js'])   // Create a stream in the directory where our Sass files are located.
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['es2015']
